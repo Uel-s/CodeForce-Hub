@@ -1,4 +1,4 @@
-import "./App.css"
+import "./index.css"
 import React, { useState } from "react";
 import Employee from "./components/Employee";
 
@@ -7,7 +7,7 @@ function App() {
   const showEmployees = true;
 
   return (
-    <div className="App">
+    <div className="App bg-cyan-300	">
       {showEmployees ? (
         <>
           <input type="text" onChange={(e) => setRole(e.target.value)} />
