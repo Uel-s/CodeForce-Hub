@@ -1,7 +1,13 @@
-import React from "react";
+import React from 'react'
 
-function Employee() {
-  return <h3>This is An Employee!</h3>;
+function Employee(props) {
+  return (
+    <div>
+<h3>Employee:   {props.name}</h3>
+<p>{props.role? props.role: "No role"}</p>
+
+    </div>
+  )
 }
 
-export default Employee;
+export default Employee

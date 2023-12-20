@@ -1,23 +1,23 @@
-import './App.css';
-import Employee from './components/Employee';
+import "./App.css"
+import React, { useState } from "react";
+import Employee from "./components/Employee";
 
 function App() {
+  const [role, setRole] = useState("Dev");
+  const showEmployees = true;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <Employee />
-        <Employee />
-        <Employee />
-        <Employee />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {showEmployees ? (
+        <>
+          <input type="text" onChange={(e) => setRole(e.target.value)} />
+          <Employee name="Sam" role="intern" />
+          <Employee name="Daine" role={role} />
+          <Employee name="Bien" />
+        </>
+      ) : (
+        <p>No employees found</p>
+      )}
     </div>
   );
 }
