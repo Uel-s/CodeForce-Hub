@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       {showEmployees ? (
         <>
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap justify-center">
             <input type="text" onChange={(e) => setRole(e.target.value)} />
             <Employee
               name="Chris"
