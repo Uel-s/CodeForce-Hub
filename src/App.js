@@ -1,10 +1,12 @@
 import "./index.css";
 import React, { useState } from "react";
 import Employee from "./components/Employee";
+//import EditEmployee from "./components/EditEmployee";
+import Header from "./components/Header";
+//import AddEmployee from "./components/AddEmployee";
 //import { v4 as uuidv4 } from "uuid";
 
 function App() {
-  const [role, setRole] = useState("Junior dev");
   const [employees, setEmployees] = useState([
     { id: 1, name: "Chris", role: "Frontend Developer", img: "image1.jpeg" },
     { id: 2, name: "Eninem", role: "Backend Developer", img: "image2.jpeg" },
@@ -50,12 +52,12 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App  bg-gray-700 min-h-screen">
+      <Header />
+
       {showEmployees ? (
         <>
-          <input type="text" onChange={(e) => setRole(e.target.value)} />
-
-          <div className="flex flex-wrap justify-center">
+          <div className="flex flex-wrap justify-center my-2">
             {employees.map((employee) => {
               return (
                 <Employee
